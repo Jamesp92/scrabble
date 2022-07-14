@@ -143,5 +143,23 @@ namespace Scrabble.Tests
       scrabbleScore = scrabble.GetScore();
       Assert.AreEqual(10, scrabbleScore);
     }
+
+    [TestMethod]
+    public void GetScore_GiveScoreForWordCar_5()
+    {
+      ScrabbleScore scrabble = new ScrabbleScore();
+      scrabble.Word = "Car";
+      int scrabbleScore = scrabble.GetScore();
+      Assert.AreEqual(5, scrabbleScore);
+    }
+
+    [TestMethod]
+    public void GetScore_GiveScoreForMusic_9()
+    {
+      ScrabbleScore scrabble = new ScrabbleScore();
+      scrabble.Word = "Music";
+      int scrabbleScore = scrabble.GetScore();
+      Assert.AreEqual(9, scrabbleScore);
+    }
   }
 }
